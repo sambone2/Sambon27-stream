@@ -39,6 +39,15 @@ header {
   font-family: 'Creepster', cursive;
 }
 
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #4e008e, 0 0 20px #8aff8a;
+  }
+  to {
+    text-shadow: 0 0 20px #8aff8a, 0 0 30px #4e008e;
+  }
+}
+
 .logo {
   max-width: 120px;
   margin-bottom: 1rem;
