@@ -35,7 +35,7 @@ header {
   background: linear-gradient(90deg, #51107a, #1aed00);
   padding: 2rem;
   text-align: center;
-  color: #fff;
+  color: #000000;
   font-family: 'Creepster', cursive;
 }
 
@@ -50,7 +50,7 @@ h1, h2 {
 
 p {
   margin-top: 0.5rem;
-  color: #ccc;
+  color: #000000;
 }
 
 main {
