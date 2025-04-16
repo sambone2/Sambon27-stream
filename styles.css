@@ -57,6 +57,14 @@ header {
   height: auto;
 }
 
+.stream-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
 
 .header-text h1 {
   font-size: 4.5rem;
