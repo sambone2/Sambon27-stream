@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Creepster';
-  src: url('Creepster-Regular.ttf') format('truetype');
+  font-family: 'TrickOrDead';
+  src: url('TrickOrDead.ttf') format('truetype');
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #111;
-  color: #e0e0e0;
   margin: 0;
   padding: 0;
+  font-family: 'TrickOrDead', cursive, sans-serif;
+  background: radial-gradient(circle at top left, #060606, #1a001f);
+  color: #e0e0e0;
   overflow-x: hidden;
-  position: relative;
 }
+
 
 .background {
   position: fixed;
@@ -31,35 +31,71 @@ body {
   100% { opacity: 1; }
 }
 
+/* Header section */
 header {
-  background: linear-gradient(90deg, #51107a, #1aed00);
-  padding: 2rem;
+  background-color: #060606;
+  padding: 40px 20px;
+  border-bottom: 2px solid #51107a;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* This keeps the whole block centered */
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.header-text {
   text-align: center;
-  color: #000000;
-  font-family: 'Creepster', cursive;
+  flex: 1;
+  min-width: 250px;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+
+.header-text h1 {
+  font-size: 4.5rem;
+  letter-spacing: 6px;
+  margin: 0;
+  color: #4e008e;
+  font-family: 'TrickOrDead', cursive;
+  text-shadow: 0 0 5px #1aed00, 0 0 20px #51107a;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #4e008e, 0 0 20px #8aff8a;
+    text-shadow: 0 0 3px #1aed00, 0 0 8px #51107a;
   }
   to {
-    text-shadow: 0 0 20px #8aff8a, 0 0 30px #4e008e;
+    text-shadow: 0 0 5px #51107a, 0 0 10px #1aed00;
   }
 }
 
-.logo {
-  max-width: 120px;
-  margin-bottom: 1rem;
+.header-text p {
+  font-size: 1.8rem;
+  color: #1aed00;
+  margin-top: 0.5rem;
+  letter-spacing: 5px;
+  font-family: 'TrickOrDead', cursive;
 }
 
 h1, h2 {
-  font-family: 'Creepster', BOLD;
+  font-family: 'TrickOrDead', BOLD;
+
 }
 
 p {
   margin-top: 0.5rem;
-  color: ##ccc;
+  color: #1aed00;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  
 }
 
 main {
@@ -69,21 +105,89 @@ main {
 }
 
 h2 {
-  color: #00ff88;
+  color: #1aed00;
   border-bottom: 2px solid #51107a;
   padding-bottom: 0.3rem;
   margin-top: 2rem;
+  font-size: 3.5rem;
+  letter-spacing: 4px;
+}
+
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(30, 237, 0, 0.2);
+}
+
+/*.schedule { 
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(30, 237, 0, 0.2);
+  width: 300px;
+  flex: 1;
+  text-align: right;
+}
+
+.schedule ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.schedule li {
+  padding: 0.5rem 0;
+  font-size: 1.6rem;
+  color: #cbdcd0;
+}
+
+  */
+
+.commands {
+  background-color: #111;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(30, 237, 0, 0.2);
+}
+
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
 }
 
 .command-list {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .command-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #333;
-  font-size: 1.1rem;
+  background-color: #1a001f;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  color: #cbdcd0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-left: 5px solid #1aed00;
+  box-shadow: 0 0 10px rgba(81, 16, 122, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.command-list li:hover {
+  transform: scale(1.02);
 }
 
 footer {
